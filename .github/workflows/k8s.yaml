@@ -13,15 +13,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Fetch kubectl
-        uses: azure/setup-kubectl@v3
-      - name: Fetch Teleport binaries
-        uses: teleport-actions/setup@v1
-        with:
-          proxy: mycluster.cloud.gravitational.io:443 # replace with your Teleport cluster address
-          version: auto
-      - name: Export kubectl config
-        run: tbot start --oneshot -c ./action_support/k8s_bot.yaml
-      - name: Run kubectl get pods
+      - name: Run kubectl
         run: |
-          kubectl --kubeconfig=./k8s_out/kubeconfig.yaml get pods -n default
+          kubectl --help
