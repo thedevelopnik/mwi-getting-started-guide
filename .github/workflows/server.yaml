@@ -16,11 +16,11 @@ jobs:
       - name: Fetch Teleport binaries
         uses: teleport-actions/setup@v1
         with:
-          proxy: mycluster.cloud.gravitational.io:443 # replace with your Teleport cluster address
+          proxy: mwidemo.cloud.gravitational.io:443 # replace with your Teleport cluster address
           version: auto
       - name: Export ssh config
         run: tbot start --oneshot -c ./action_support/server_bot.yaml
       - name: Run mpstat
         # replace target server address with yours
         run: |
-          ssh -F ./ssh_out/ssh_config ubuntu@myinstance.mycluster.cloud.gravitational.io mpstat
+          ssh -F ./ssh_out/ssh_config ubuntu@target1.mwidemo.cloud.gravitational.io mpstat

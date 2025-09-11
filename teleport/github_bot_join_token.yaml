@@ -9,6 +9,6 @@ spec:
   bot_name: github-bot
   github:
     allow:
-      - repository: "your-github-username/mwi-getting-started-guide" # if you cloned the example repo, if not, use your repo name
+      - repository: "thedevelopnik/mwi-getting-started-guide" # if you cloned the example repo, if not, use your repo name
     # enterprise_server_host: github.my-company.com # use for self-hosted GitHub Enterprise
     # enterprise_slug: my-company # use for GitHub Enterprise Cloud organization
